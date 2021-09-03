@@ -1,5 +1,8 @@
 pipeline {
-agent any
+agent {
+    node {
+        label 'slave1'
+    }
 environment {
 dotnet = 'path\\to\\dotnet.exe'
 }
