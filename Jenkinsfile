@@ -2,7 +2,10 @@ pipeline {
 agent {
     node {
         label 'slave1'
-    }}
+}}
+triggers {
+    githubPush()    
+    }
 environment {
 dotnet = '/usr/bin/dotnet.exe'
 }
@@ -14,6 +17,7 @@ stage ('Checkout') {
 }
 stage ('Restore PACKAGES') {     
          steps {
+             sh "export PATH=/usr/bin/dotnet:$PATH"
              sh "dotnet restore"
           }
         }
