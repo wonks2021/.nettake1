@@ -4,7 +4,7 @@ agent {
         label 'slave1'
     }}
 environment {
-dotnet = 'path\\to\\dotnet.exe'
+dotnet = '/usr/bin/dotnet.exe'
 }
 stages {
 stage ('Checkout') {
