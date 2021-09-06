@@ -12,7 +12,8 @@ dotnet = '/usr/bin/dotnet.exe'
 stages {
 stage ('Checkout') {
             steps {
-                 git credentialsId: 'userId', url: 'https://github.com/wonks2021/nettake1.git',branch: 'master'
+                //this is a comment 
+                git credentialsId: 'userId', url: 'https://github.com/wonks2021/nettake1.git',branch: 'master'
             }
 }
 stage ('Restore PACKAGES') {     
