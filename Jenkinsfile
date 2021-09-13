@@ -12,7 +12,7 @@ dotnet = '/usr/bin/dotnet.exe'
 stages {
 stage('Cleancache') {
       steps {
-            sh 'rm -rf /home/ubuntu/jenkins/workspace/dotnet/'
+            sh 'rm -rf /home/ubuntu/jenkins/workspace/dotnet/*'
        }
     }
 stage ('Checkout') {
