@@ -27,6 +27,11 @@ stage('Clean') {
             sh 'dotnet clean'
        }
     }
+stage('CleanCache') {
+      steps {
+            sh 'rm -rf /home/ubuntu/jenkins/workspace/dotnet/'
+       }
+    }
 stage('Build') {
      steps {
             sh 'dotnet build'
@@ -39,7 +44,7 @@ stage('Pack') {
    }
 stage('Publish') {
       steps {
-            sh "ls -dh"
+            sh 'ls -dh'
             sh "nuget push <PACKAGE_NAME> -Source Artifactory"
             sh "nuget push SampleCliApp.1.1.1.nupkg -Source https://projectnuget.jfrog.io/artifactory/api/nuget/nuget-nuget/samplecliapp"
             sh "dotnet nuget push **\\nupkgs\\*.nupkg -k yourApiKey -s http://myserver/artifactory/api/nuget/nuget-internal-stable/com/sample"
