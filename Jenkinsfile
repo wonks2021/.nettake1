@@ -69,8 +69,8 @@ stage('Pack') {
                         )
             }
         }
-    stage('Download'){
-        steps{
+        stage('Download'){
+            steps{
                 rtDownload (
                  serverId:"Artifactory" ,
                   spec: '''{
@@ -78,7 +78,7 @@ stage('Pack') {
                       {
                       "pattern": "*.nupkg",
                       "target": "nuget101-nuget-local"
-                    }
+                      }
                             ]
                            }''',
                         )
