@@ -69,21 +69,6 @@ stage('Pack') {
                         )
             }
         }
-        stage('Download'){
-            steps{
-                rtDownload (
-                 serverId:"Artifactory" ,
-                  spec: '''{
-                   "files": [
-                      {
-                      "pattern": "*.nupkg",
-                      "target": "nuget101-nuget-local"
-                      }
-                            ]
-                           }''',
-                        )
-            }
-        }
         stage ('Publish build info') {
             steps {
                 rtPublishBuildInfo (
