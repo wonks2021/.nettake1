@@ -77,7 +77,7 @@ stage('Pack') {
                    "files": [
                       {
                       "pattern": "SampleCliApp.1.0.0.nupkg",
-                      "target": "nuget101-nuget-local"
+                      "target": "nuget101-nuget"
                       }
                             ]
                            }''',
