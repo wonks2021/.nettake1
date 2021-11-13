@@ -76,7 +76,7 @@ stage('Pack') {
                   spec: '''{
                    "files": [
                       {
-                      "pattern": "SampleCliApp.1.0.0.nupkg",
+                      "pattern": "DD.1.0.0.nupkg",
                       "target": "nuget101-nuget"
                       }
                             ]
