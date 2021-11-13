@@ -76,8 +76,8 @@ stage('Pack') {
                   spec: '''{
                    "files": [
                       {
-                      "pattern": "DD.1.0.0.nupkg",
-                      "target": "nuget101-nuget"
+                      "pattern": "nuget101-nuget-local/SampleCliApp.1.0.0.nupkg",
+                      "target": "/home/ubuntu/jenkins/workspace/dotnet/"
                       }
                             ]
                            }''',
