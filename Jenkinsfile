@@ -90,6 +90,11 @@ stage('Pack') {
                     serverId: "Artifactory"
                 )
             }
+        stage('Run') {
+           steps {
+            sh 'dotnet run'
+                 }
+                     }
         }
  }
 }
