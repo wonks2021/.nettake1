@@ -37,11 +37,6 @@ stage('Build') {
             sh 'dotnet build'
       }
    }
- stage('Run') {
-           steps {
-            sh 'dotnet run'
-                 }
-              }
 stage('Pack') {
      steps {
            sh 'dotnet pack --no-build --output nupkgs'
